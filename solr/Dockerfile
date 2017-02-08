@@ -1,4 +1,4 @@
-FROM tomcat7
+FROM prettysmile/tomcat7
 
 #
 # setup Solr

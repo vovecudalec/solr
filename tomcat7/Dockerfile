@@ -1,4 +1,4 @@
-FROM java7
+FROM prettysmile/java
 
 # Here comes the tomcat installation
 RUN apt-get -y install \
