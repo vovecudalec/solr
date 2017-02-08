@@ -18,6 +18,9 @@ RUN tar xf $TOMCAT_FILE_NAME -C /opt
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> $CATALINA_HOME/bin/setenv.sh
 
 COPY tomcat-users.xml $CATALINA_HOME/conf/
+COPY setenv.sh $CATALINA_HOME/bin/
+
+RUN chmod 755 $CATALINA_HOME/bin/setenv.sh
 #
 ## Expose the default tomcat port
 EXPOSE 8080
