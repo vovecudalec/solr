@@ -4,8 +4,8 @@ read shore
 
 if  [ $shore == y ]; then
     docker stop $(docker ps -a -q)
-    docker rm $(docker ps -a -q)
-    docker rmi $(docker images -q)
+    docker rm -f $(docker ps -a -q)
+    docker rmi -f $(docker images -q)
     exit 0
 else
     exit 0
