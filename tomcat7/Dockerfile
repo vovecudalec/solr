@@ -9,6 +9,8 @@ RUN apt-get update && apt-get -y install \
     wget \
     unzip \
     net-tools \
+    vim \
+    iputils-ping \
     && rm -rf /var/lib/apt/lists/* \
     && wget $TOMCAT_URL/$TOMCAT_FILE_NAME \
     && mkdir $CATALINA_HOME \
