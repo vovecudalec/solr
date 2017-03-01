@@ -1,1 +1,1 @@
-CATALINA_OPTS="-Xmx1024m -XX:MaxPermSize=256m -XX:+UseG1GC"
+CATALINA_OPTS="-Xmx2048m -XX:MaxPermSize=256m -XX:+UseG1GC"
