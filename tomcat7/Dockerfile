@@ -16,10 +16,11 @@ RUN apt-get update && apt-get -y install \
     && mkdir $CATALINA_HOME \
     && tar xf $TOMCAT_FILE_NAME -C /opt \
     && echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> $CATALINA_HOME/bin/setenv.sh \
-    && echo "CATALINA_OPTS=\"-Xmx1024m -XX:MaxPermSize=256m -XX:+UseG1GC\"" >> $CATALINA_HOME/bin/setenv.sh \
+#    && echo "CATALINA_OPTS=\"-Xmx1024m -XX:MaxPermSize=256m -XX:+UseG1GC\"" >> $CATALINA_HOME/bin/setenv.sh \
     && chmod 755 $CATALINA_HOME/bin/setenv.sh
 
 COPY tomcat-users.xml $CATALINA_HOME/conf/
 COPY server.xml $CATALINA_HOME/conf/
+COPY setenv.sh $CATALINA_HOME/bin/
 
 EXPOSE 8080 8888
