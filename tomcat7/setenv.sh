@@ -1,1 +1,1 @@
-CATALINA_OPTS="-Xmx2048m -XX:MaxPermSize=256m -XX:+UseG1GC"
+CATALINA_OPTS="-Xmx2048m -XX:MaxPermSize=256m -XX:+UseG1GC -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8888 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"

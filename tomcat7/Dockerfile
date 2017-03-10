@@ -21,4 +21,4 @@ RUN apt-get update && apt-get -y install \
 
 COPY tomcat-users.xml $CATALINA_HOME/conf/
 
-EXPOSE 8080
+EXPOSE 8080, 8888
