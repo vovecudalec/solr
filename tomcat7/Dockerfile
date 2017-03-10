@@ -20,5 +20,6 @@ RUN apt-get update && apt-get -y install \
     && chmod 755 $CATALINA_HOME/bin/setenv.sh
 
 COPY tomcat-users.xml $CATALINA_HOME/conf/
+COPY server.xml $CATALINA_HOME/conf/
 
-EXPOSE 8080, 8888
+EXPOSE 8080 8888
