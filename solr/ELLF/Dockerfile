@@ -12,7 +12,6 @@ ENV ALFRESCO_SOLR_CONTENT $ALFRESCO_SOLR_DIR/content
 ENV SOLR_ARCHIVE_NAME korus_patched_solr.zip
 ENV SOLR_URL https://github.com/vovecudalec/solr/raw/master/$SOLR_ARCHIVE_NAME
 
-COPY $SOLR_ARCHIVE_NAME /
 COPY context.xml $CATALINA_HOME/conf/Catalina/localhost/solr4.xml
 
 RUN mkdir /Alfresco \
