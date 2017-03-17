@@ -7,7 +7,7 @@ FROM prettysmile/tomcat7
 ENV ALFRESCO_SOLR_DIR /Alfresco/solr
 ENV ALFRESCO_SOLR_LOGS $ALFRESCO_SOLR_DIR/logs
 
-ENV SOLR_ARCHIVE_NAME korus_patched_solr.zip
+ENV SOLR_ARCHIVE_NAME korus_patched_solr-4.zip
 ENV SOLR_URL https://github.com/vovecudalec/solr/raw/master/$SOLR_ARCHIVE_NAME
 
 RUN mkdir /Alfresco \
