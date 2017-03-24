@@ -11,7 +11,7 @@ RUN apt-get update && apt-get -y install \
     iputils-ping \
     && rm -rf /var/lib/apt/lists/* \
     && wget $TOMCAT_URL \
-    && tar xf $TOMCAT_FILE_NAME -C /opt
+    && tar xf $TOMCAT_FILE_NAME -C /opt \
     && rm $TOMCAT_FILE_NAME
 
 COPY tomcat-users.xml $CATALINA_HOME/conf/
