@@ -28,6 +28,10 @@ COPY workspace.SpacesStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-Spac
 COPY workspace.HistoryStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrcore.properties
 COPY archive.SpacesStore.solrcore.properties $ALFRESCO_SOLR_DIR/archive-SpacesStore/conf/solrcore.properties
 
+COPY space.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-SpacesStore/conf/solrconfig.xml
+COPY history.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrconfig.xml
+COPY archive.solrconfig.xml $ALFRESCO_SOLR_DIR/archive-SpacesStore/conf/solrconfig.xml
+
 CMD /opt/apache-tomcat-7.0.75/bin/catalina.sh start && tail -f /opt/apache-tomcat-7.0.75/logs/catalina.out
 
 
