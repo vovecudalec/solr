@@ -9,7 +9,7 @@ ENV ALFRESCO_SOLR_LOGS $ALFRESCO_SOLR_DIR/logs
 ENV ALFRESCO_SOLR_MODEL $ALFRESCO_SOLR_DIR/model
 ENV ALFRESCO_SOLR_CONTENT $ALFRESCO_SOLR_DIR/content
 
-ENV SOLR_ARCHIVE_NAME korus_patched_solr-4_ent.zip
+ENV SOLR_ARCHIVE_NAME korus_patched_solr-4.zip
 ENV SOLR_URL https://github.com/vovecudalec/solr/raw/master/$SOLR_ARCHIVE_NAME
 
 RUN mkdir /Alfresco \
@@ -26,6 +26,10 @@ RUN mkdir /Alfresco \
 COPY workspace.SpacesStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-SpacesStore/conf/solrcore.properties
 COPY workspace.HistoryStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrcore.properties
 COPY archive.SpacesStore.solrcore.properties $ALFRESCO_SOLR_DIR/archive-SpacesStore/conf/solrcore.properties
+
+COPY space.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-SpacesStore/conf/solrconfig.xml
+COPY history.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrconfig.xml
+COPY archive.solrconfig.xml $ALFRESCO_SOLR_DIR/archive-SpacesStore/conf/solrconfig.xml
 
 CMD /opt/apache-tomcat-7.0.75/bin/catalina.sh start && tail -f /opt/apache-tomcat-7.0.75/logs/catalina.out
 
