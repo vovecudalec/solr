@@ -21,7 +21,7 @@ RUN mkdir /Alfresco \
     && unzip $SOLR_ARCHIVE_NAME -d $ALFRESCO_SOLR_DIR \
     && rm $SOLR_ARCHIVE_NAME \
     && mkdir -p $CATALINA_HOME/conf/Catalina/localhost/ \
-    && cp -f $ALFRESCO_SOLR_DIR/context.xml $CATALINA_HOME/conf/Catalina/localhost/solr.xml
+    && cp -f $ALFRESCO_SOLR_DIR/context.xml $CATALINA_HOME/conf/Catalina/localhost/solr4.xml
 
 COPY workspace.SpacesStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-SpacesStore/conf/solrcore.properties
 COPY workspace.HistoryStore.solrcore.properties $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrcore.properties
