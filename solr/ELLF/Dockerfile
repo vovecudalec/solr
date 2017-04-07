@@ -27,6 +27,6 @@ COPY space.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-SpacesStore/conf/solrconf
 COPY history.solrconfig.xml $ALFRESCO_SOLR_DIR/workspace-historyStore/conf/solrconfig.xml
 COPY archive.solrconfig.xml $ALFRESCO_SOLR_DIR/archive-SpacesStore/conf/solrconfig.xml
 
-CMD /opt/apache-tomcat-7.0.75/bin/catalina.sh start && tail -f /opt/apache-tomcat-7.0.75/logs/catalina.out
+CMD /opt/apache-tomcat-7.0.59/bin/catalina.sh start && tail -f /opt/apache-tomcat-7.0.59/logs/catalina.out
 
 
