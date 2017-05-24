@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+
+  csed1:
+    image: prettysmile/solr4-ent:CSED
+    container_name: solr4_csed1
+    volumes:
+      - index_archive_csed1:/Alfresco/solr/archive
+      - index_workspace_csed1:/Alfresco/solr/workspace
+    ports:
+      - "8082:8080"
+      - "8802:8888"
+
+  csed2:
+    image: prettysmile/solr4-ent:CSED
+    container_name: solr4_csed2
+    volumes:
+      - index_archive_csed2:/Alfresco/solr/archive
+      - index_workspace_csed2:/Alfresco/solr/workspace
+    ports:
+      - "8083:8080"
+      - "8803:8888"
+
+volumes:
+  index_archive_csed1:
+  index_workspace_csed1:
+  index_archive_csed2:
+  index_workspace_csed2:

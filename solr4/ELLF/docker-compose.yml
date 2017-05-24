@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  solr_for_ellf:
+    image: prettysmile/solr4:ellf
+    container_name: solr_for_ellf
+    volumes:
+      - index_archive:/Alfresco/solr/archive
+      - index_workspace:/Alfresco/solr/workspace
+    ports:
+     - "8081:8080"
+     - "8801:8888"
+
+volumes:
+  index_archive:
+  index_workspace:
