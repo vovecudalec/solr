@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  csed1:
+    image: prettysmile/solr4-ent:CSED
+    container_name: solr4_csed1
+    ports:
+      - "8082:8080"
+      - "8882:8888"
+
+  csed2:
+    image: prettysmile/solr4-ent:CSED
+    container_name: solr4_csed2
+    ports:
+      - "8083:8080"
+      - "8883:8888"
