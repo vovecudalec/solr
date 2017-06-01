@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+
+  solr1alf4:
+    build: ./solr1.4/local/
+    container_name: solr1alf4
+    volumes:
+      - index_archive_local:/Alfresco/solr/archive
+      - index_workspace_local:/Alfresco/solr/workspace
+    ports:
+      - "8080:8080"
+
+  solr1alf5:
+    build: ./solr1.4_ent/local/
+    container_name: solr1alf5
+    volumes:
+      - index_archive_local:/Alfresco/solr/archive
+      - index_workspace_local:/Alfresco/solr/workspace
+    ports:
+      - "8080:8080"
+
+  solr4alf5:
+    build: ./solr4_ent/local
+    container_name: solr4alf5
+    volumes:
+      - index_archive_local:/Alfresco/solr/archive
+      - index_workspace_local:/Alfresco/solr/workspace
+    ports:
+      - "8080:8080"
+
+volumes:
+  index_archive_local:
+  index_workspace_local:

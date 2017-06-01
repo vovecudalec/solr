@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+  solr1alf5:
+    build: ./solr1.4_ent/CSED
+    container_name: csed_solr1alf5
+    volumes:
+      - index_archive_csed1:/Alfresco/solr/archive
+      - index_workspace_csed1:/Alfresco/solr/workspace
+    ports:
+      - "8082:8080"
+
+  solr4alf5:
+    build: ./solr4_ent/CSED
+    container_name: csed_solr4alf5
+    volumes:
+      - index_archive_csed1:/Alfresco/solr/archive
+      - index_workspace_csed1:/Alfresco/solr/workspace
+    ports:
+      - "8082:8080"
+
+volumes:
+  index_archive_csed1:
+  index_workspace_csed1:
