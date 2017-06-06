@@ -20,6 +20,15 @@ services:
     ports:
       - "8083:8080"
 
+  solr4alf5nocontent:
+    build: ./solr4_ent/CSED/Dockerfile_nocontent
+    container_name: csed_solr4alf5nocontent
+    volumes:
+      - index_archive_csed1_nocontent:/Alfresco/solr/archive
+      - index_workspace_csed1_nocontent:/Alfresco/solr/workspace
+    ports:
+      - "8082:8080"
+
 volumes:
   index_archive_csed1:
   index_workspace_csed1:
