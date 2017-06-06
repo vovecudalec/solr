@@ -21,7 +21,9 @@ services:
       - "8083:8080"
 
   solr4alf5nocontent:
-    build: ./solr4_ent/CSED/Dockerfile_nocontent
+    build:
+      context: ./solr4_ent/CSED/
+      dockerfile: Dockerfile-Dockerfile_nocontent
     container_name: csed_solr4alf5nocontent
     volumes:
       - index_archive_csed1_nocontent:/Alfresco/solr/archive
