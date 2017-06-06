@@ -35,4 +35,4 @@ volumes:
   index_archive_csed2:
   index_workspace_csed2:
   index_archive_csed1_nocontent:
-  index_workspace_csed1_nocontent
+  index_workspace_csed1_nocontent:
