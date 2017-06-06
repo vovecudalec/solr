@@ -23,7 +23,7 @@ services:
   solr4alf5nocontent:
     build:
       context: ./solr4_ent/CSED/
-      dockerfile: Dockerfile-Dockerfile_nocontent
+      dockerfile: Dockerfile_nocontent
     container_name: csed_solr4alf5nocontent
     volumes:
       - index_archive_csed1_nocontent:/Alfresco/solr/archive
