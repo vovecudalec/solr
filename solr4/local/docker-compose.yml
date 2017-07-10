@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  solr4local:
+    build:
+      context: .
+    container_name: solr4local
+    volumes:
+      - index_archive_local:/Alfresco/solr/archive
+      - index_workspace_local:/Alfresco/solr/workspace
+    ports:
+     - "8080:8080"
+
+volumes:
+  index_archive_local:
+  index_workspace_local:
