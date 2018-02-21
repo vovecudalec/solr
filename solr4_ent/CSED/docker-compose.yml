@@ -5,6 +5,10 @@ services:
   csed1:
     image: prettysmile/solr4-ent:CSED
     container_name: solr4_csed1
+    volumes:
+      - csed1_solr4_archive:/Alfresco/solr/archive
+      - csed1_solr4_workspace:/Alfresco/solr/workspace
+      - csed1_logs:/opt/apache-tomcat-7.0.59/logs/
     ports:
       - "8082:8080"
       - "8882:8888"
@@ -12,6 +16,18 @@ services:
   csed2:
     image: prettysmile/solr4-ent:CSED
     container_name: solr4_csed2
+    volumes:
+      - csed2_solr4_archive:/Alfresco/solr/archive
+      - csed2_solr4_workspace:/Alfresco/solr/workspace
+      - csed2_logs:/opt/apache-tomcat-7.0.59/logs/
     ports:
       - "8083:8080"
       - "8883:8888"
+
+volumes:
+  csed1_solr4_archive:
+  csed1_solr4_workspace:
+  csed1_logs:
+  csed2_solr4_archive:
+  csed2_solr4_workspace:
+  csed2_logs:

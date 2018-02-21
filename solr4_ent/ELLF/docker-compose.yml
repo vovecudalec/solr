@@ -2,8 +2,8 @@ version: '2'
 
 services:
   solr_for_ellf:
-    image: prettysmile/solr4:ellf
-    container_name: solr_for_ellf
+    context: .
+    container_name: solr4ent_for_ellf
     volumes:
       - ellf_index_archive:/Alfresco/solr/archive
       - ellf_index_workspace:/Alfresco/solr/workspace
